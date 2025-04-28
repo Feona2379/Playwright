@@ -19,6 +19,6 @@ test('frames', async ({ page }) => {
   inputbox.fill("Hello")
 
 
-  await page.waitForTimeout(5000);
+  //await page.waitForTimeout(5000);
  
 });

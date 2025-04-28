@@ -13,7 +13,7 @@ test('Hidden options dropdown', async ({page}) =>{
      await page.locator("//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[6]/div/div[2]/div/div/div[2]").click()
 
     //waiting for options
-    await page.waitForTimeout(3000);
+    //await page.waitForTimeout(3000);
 
     const options=await page.$$("//div[@role='listbox']//span")
 
@@ -27,7 +27,7 @@ test('Hidden options dropdown', async ({page}) =>{
             break;
         }
     }
-    await page.waitForTimeout(5000);
+    //await page.waitForTimeout(5000);
     
 
 })

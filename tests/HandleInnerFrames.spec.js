@@ -12,7 +12,7 @@ test('Inner frames', async ({ page }) => {
   await childFrames[0].locator("//*[@id='i5']/div[3]/div").check() // radio button
 
 
-  await page.waitForTimeout(5000);
+  //await page.waitForTimeout(5000);
 
  
 });

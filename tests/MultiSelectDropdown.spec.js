@@ -23,6 +23,6 @@ test("Handle dropdowns",async ({page})=>{
     await expect(content.includes('Black')).toBeFalsy;
 
 
-    await page.waitForTimeout(5000);
+   // await page.waitForTimeout(5000);
 
 })

@@ -11,6 +11,6 @@ test ('Mouse hover', async ({page})=>{
     await desktops.hover()
     await macbook.hover()
 
-    await page.waitForTimeout(5000)
+    //await page.waitForTimeout(5000)
 
 })

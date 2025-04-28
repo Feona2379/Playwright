@@ -40,5 +40,5 @@ test('Boostrap dropdown', async ({page}) =>{
     }
 
 
-    await page.waitForTimeout(5000);
+   // await page.waitForTimeout(5000);
 })

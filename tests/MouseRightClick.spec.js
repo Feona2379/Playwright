@@ -9,7 +9,7 @@ test ('Mouse Right Click', async ({page})=>{
     //right click action
     await button.click({button: 'right'});
 
-    await page.waitForTimeout(5000)
+    //await page.waitForTimeout(5000)
    
 
 })

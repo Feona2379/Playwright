@@ -29,7 +29,7 @@ test.skip('Confirmation Dialod-Alert with OK and cancel', async ({ page }) => {
   await page.click('//button[normalize-space()="Confirm Box"]');
   await expect(page.locator('//p[@id="demo"]')).toHaveText('You pressed OK!')
 
-  await page.waitForTimeout(5000);
+  //await page.waitForTimeout(5000);
  
 });
 
@@ -47,6 +47,6 @@ test('Prompt Dialog', async ({ page }) => {
   await page.click('//button[normalize-space()="Prompt"]');
   await expect(page.locator('//p[@id="demo"]')).toHaveText('Hello John! How are you today?')
 
-  await page.waitForTimeout(5000);
+ // await page.waitForTimeout(5000);
  
 });

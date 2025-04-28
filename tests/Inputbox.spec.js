@@ -14,6 +14,6 @@ test('handle inputbox',async ({page})=>{
    //await page.locator("//input[@id='name']").fill("John")
     await page.fill("//input[@id='name']",'John');
 
-    await page.waitForTimeout(5000); //pausing code
+    await page.waitForTimeout(150000); //pausing code
 
 })

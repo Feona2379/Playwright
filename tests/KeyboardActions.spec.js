@@ -22,7 +22,7 @@ test('Keyboard actions', async ({ page }) => {
     //Ctrl + V  - paste the text
     await page.keyboard.press('Meta+V')
 
-    await page.waitForTimeout(5000);
+    await page.waitForTimeout(150000);
 
 });
 

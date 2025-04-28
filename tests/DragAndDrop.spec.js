@@ -24,6 +24,6 @@ test ('Drag And Drop', async ({page})=>{
     await washington.dragTo(usa)
 
 
-   await page.waitForTimeout(5000)
+  // await page.waitForTimeout(5000)
 
 })

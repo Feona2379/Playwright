@@ -11,7 +11,7 @@ test('Mouse hover',async ({page})=>{
      await desktops.hover()
      await macbook.hover()
 
-     await page.waitForTimeout(5000) 
+     await page.waitForTimeout(150000) 
  
  } )
 
@@ -25,7 +25,7 @@ test.skip('Right Click',async ({page})=>{
     
     // Right-click on the button
     await button.click({ button: 'right' });
-    await page.waitForTimeout(5000) 
+    await page.waitForTimeout(150000) 
 
 } )
 
@@ -41,7 +41,7 @@ test.skip('Double Click',async ({page})=>{
     const f2= await page.locator('#field2')
     await expect(f2).toHaveValue('Hello World!')
 
-    await page.waitForTimeout(5000) 
+   // await page.waitForTimeout(5000) 
   } )
 
   test.skip('Drag and Drop',async ({page})=>{
@@ -66,6 +66,6 @@ test.skip('Double Click',async ({page})=>{
     const usa = await page.locator('#box103');
     await washington.dragTo(usa);
 
-    await page.waitForTimeout(5000) 
+   // await page.waitForTimeout(5000) 
   } )
 

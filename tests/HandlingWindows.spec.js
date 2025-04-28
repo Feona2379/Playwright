@@ -34,8 +34,8 @@ test('Handle Multiple Pages/Windows', async () => {
   const newPage= await pagePromise;
   await expect(newPage).toHaveTitle("OrangeHRM HR Software | Free & Open Source HR Software | HRMS | HRIS | OrangeHRM")
 
-  await page1.waitForTimeout(3000)
-  await newPage.waitForTimeout(3000)
+  //await page1.waitForTimeout(3000)
+  //await newPage.waitForTimeout(3000)
   
   await browser.close()
 

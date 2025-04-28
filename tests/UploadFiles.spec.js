@@ -11,7 +11,7 @@ test('Single File',async ({page})=>{
 
     await page.locator('#file-upload').setInputFiles('tests/uploadFiles/testfile1.pdf')
    
-    await page.waitForTimeout(5000)
+    //await page.waitForTimeout(5000)
 })
 
 test('Multiple Files',async ({page})=>{
@@ -26,14 +26,14 @@ test('Multiple Files',async ({page})=>{
     expect (await page.locator('#fileList li:nth-child(1)')).toHaveText('testfile1.pdf')
     expect (await page.locator('#fileList li:nth-child(2)')).toHaveText('testfile2.pdf')
 
-    await page.waitForTimeout(3000)
+    //await page.waitForTimeout(3000)
 
     //Removing files
     await page.locator('#filesToUpload').setInputFiles([])
-    await page.waitForTimeout(3000)
+   // await page.waitForTimeout(3000)
 
     expect(await page.locator('#fileList li:nth-child(1)')).toHaveText('No Files Selected')
 
-    await page.waitForTimeout(3000)
+    //await page.waitForTimeout(3000)
 
 })
