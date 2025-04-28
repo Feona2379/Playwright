@@ -1,5 +1,4 @@
 
----
 
 # 🎭 Playwright Test Automation Suite
 
@@ -28,6 +27,7 @@ playwright-project/
 │
 ├── playwright.config.ts     # Playwright configuration
 ├── package.json             # Dependencies and scripts
+├── .eslintrc.js             # ESLint configuration
 └── README.md                # You're here!
 ```
 
@@ -37,18 +37,29 @@ playwright-project/
 
 ### Prerequisites
 
-- Node.js ≥ 16.x  
-- npm or yarn
+- **Node.js** ≥ 16.x  
+- **npm** or **yarn**
 
 ### Installation
 
-```bash
-npm install
-# or
-yarn install
-```
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Feona2379/Playwright.git
+   cd playwrightautomation
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
 ### Run Tests
+
+To run all tests:
 
 ```bash
 npx playwright test
@@ -78,6 +89,74 @@ npx playwright show-report
 
 - **playwright.config.ts**  
   Contains base settings like test timeout, browser options, test directory, and reporter config.
+- **.eslintrc.js**  
+  Configuration file for ESLint that enforces code style and quality standards across the project.
+
+---
+
+## 🧑‍💻 Code Quality Tools
+
+### ESLint
+
+[ESLint](https://eslint.org/) is used to ensure that the code adheres to a consistent style and follows best practices. The ESLint configuration file `.eslintrc.js` is included in this project to enforce rules related to:
+
+- **Code style**: Enforces consistent indentation, quotes, and other style guidelines.
+- **Error detection**: Warns or errors on common issues like unused variables, potential bugs, etc.
+- **Best practices**: Enforces best practices like no `console.log` in production code.
+
+To run ESLint on your project, simply execute:
+
+```bash
+npx eslint .
+```
+
+To fix issues automatically:
+
+```bash
+npx eslint . --fix
+```
+
+### Husky
+
+[Husky](https://typicode.github.io/husky/) is used to run hooks in Git to ensure quality checks before committing or pushing code. This project uses **Husky** to ensure that certain tasks are executed before commits and pushes, such as linting the code.
+
+### Pre-commit Hook Setup with Husky
+
+Husky can run pre-commit hooks to lint your code before you commit it. This ensures that only code that meets the standards gets committed.
+
+The following hook has been set up:
+
+- **Pre-commit hook**: Runs ESLint to lint all the files that are staged for commit.
+
+To install and enable Husky in your repository, make sure the following is done (it should already be set up from the instructions earlier):
+
+1. Install Husky and lint-staged:
+
+   ```bash
+   npm install husky lint-staged --save-dev
+   ```
+
+2. Enable Git hooks with Husky:
+
+   ```bash
+   npx husky install
+   ```
+
+3. Set up the pre-commit hook to run ESLint:
+
+   ```bash
+   npx husky add .husky/pre-commit "npx lint-staged"
+   ```
+
+4. In your `package.json`, add the following configuration for lint-staged:
+
+   ```json
+   "lint-staged": {
+     "*.ts": "eslint --fix"
+   }
+   ```
+
+This configuration ensures that before every commit, **Husky** will run the `eslint --fix` command on all staged `.ts` files.
 
 ---
 
@@ -166,3 +245,25 @@ test('User can login successfully', async ({ page }) => {
 If you have any questions or need support, feel free to reach out!
 
 ---
+
+## 🤝 Contributing
+
+We welcome contributions! Please fork this repository, make your changes, and create a pull request. Here's how you can contribute:
+
+1. Fork the repo
+2. Create a new branch (`git checkout -b feature-name`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature-name`)
+5. Create a pull request
+
+---
+
+## ⚠️ Troubleshooting
+
+If you run into issues during setup or running the tests, here are some common solutions:
+
+- **Playwright not installed correctly**: Make sure that you've run `npm install` or `yarn install` to get all dependencies.
+- **Permissions issues**: Ensure that your test scripts have permission to execute by checking the file permissions in the `tests/` and `pages/` directories.
+
+---
+
