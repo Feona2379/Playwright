@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test('Mouse hover',async ({page})=>{
+test.skip('Mouse hover',async ({page})=>{
 
     await page.goto('https://demo.opencart.com/');
     

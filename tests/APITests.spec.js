@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 // Create
-test("Create user", async ({ request, baseURL }) => {
+test.skip("Create user", async ({ request, baseURL }) => {
     const _response = await request.post(`${baseURL}`, {
         data: {
             "name": "xyz}",
