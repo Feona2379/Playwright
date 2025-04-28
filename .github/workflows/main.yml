@@ -1,0 +1,29 @@
+name: Playwright Tests
+
+on:
+  push:
+    branches: [ "master" ]   # Run tests when you push to master branch
+  pull_request:
+    branches: [ "master" ]   # Also run when a pull request is made
+
+jobs:
+  test:
+    runs-on: ubuntu-latest   # GitHub gives you a free Linux machine
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4   # Pull your repo code into GitHub machine
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'         # Install Node.js version 18
+
+    - name: Install dependencies
+      run: npm install             # Same as running 'npm install' locally
+
+    - name: Install Playwright Browsers
+      run: npx playwright install  # Install Chromium, Firefox, WebKit
+
+    - name: Run Tests
+      run: npx playwright test     # Run your Playwright tests
