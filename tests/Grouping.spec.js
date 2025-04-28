@@ -16,7 +16,7 @@ test.afterEach(async()=>{
     console.log('this is afterEach Hook......')
 })
 
-test.describe.skip('Group1',()=>{
+test.describe('Group1',()=>{
 
     test('Test1', async({page})=>{
         console.log('this is test 1....')

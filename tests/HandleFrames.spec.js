@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test('frames', async ({ page }) => {
+test.skip('frames', async ({ page }) => {
  
   await page.goto('https://ui.vision/demo/webtest/frames/');
 

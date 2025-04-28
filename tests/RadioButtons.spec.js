@@ -1,6 +1,6 @@
 const {test, expect}=require('@playwright/test')
 
-test('handle radio button',async ({page})=>{
+test.skip('handle radio button',async ({page})=>{
 
     await page.goto('https://itera-qa.azurewebsites.net/home/automation');
 

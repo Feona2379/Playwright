@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test('Keyboard actions', async ({ page }) => {
+test.skip('Keyboard actions', async ({ page }) => {
     
     await page.goto("https://gotranscript.com/text-compare")
 

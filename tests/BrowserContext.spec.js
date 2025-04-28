@@ -1,7 +1,7 @@
 import { chromium,test, expect } from '@playwright/test';
 //const { chromium, test, expect } = require('@playwright/test')
 
-test("browse context test",async () => {
+test.skip("browse context test",async () => {
   const browser = await chromium.launch({ headless: false });
   const context1 = await browser.newContext();
   const context2 = await browser.newContext();

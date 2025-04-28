@@ -13,6 +13,6 @@ test ('Mouse Double Click', async ({page})=>{
 
     await expect(f2).toHaveValue('Hello World!')
 
-    await page.waitForTimeout(150000)
+   // await page.waitForTimeout(150000)
 
 })

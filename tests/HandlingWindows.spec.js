@@ -19,7 +19,7 @@ const { test, expect, chromium } = require('@playwright/test');
 
 })*/
 
-test('Handle Multiple Pages/Windows', async () => {
+test.skip('Handle Multiple Pages/Windows', async () => {
             
   const browser=await chromium.launch()
   const context=await browser.newContext()

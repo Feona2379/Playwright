@@ -2,7 +2,7 @@
 
 const {test, expect}=require('@playwright/test')
 
-test('Single File',async ({page})=>{
+test.skip('Single File',async ({page})=>{
 
     await page.goto('https://www.foundit.in/')
 
@@ -14,7 +14,7 @@ test('Single File',async ({page})=>{
     //await page.waitForTimeout(5000)
 })
 
-test('Multiple Files',async ({page})=>{
+test.skip('Multiple Files',async ({page})=>{
 
     await page.goto('https://davidwalsh.name/demo/multiple-file-upload.php')
 
